@@ -4,7 +4,7 @@ import '../model/ride/ride.dart';
 
 class RidesService {
   static List<Ride> availableRides = fakeRides; // TODO for now fake data
-
+  // Start
   //
   //  filter the rides starting from given departure location
   //
