@@ -80,7 +80,7 @@ class _RidePrefFormState extends State<RidePrefForm> {
   void onArrivalPressed() async { 
     // TODO-1 - Complete
 
-    // same as departure but arrival
+    // same as departure but arrival (handle picker BLA-004 filteLocation logic)
     Location? selectedLocation = await Navigator.of(context).push<Location>(
       AnimationUtils.createBottomToTopRoute(
         BlaLocationPicker(initLocation: arrival),
