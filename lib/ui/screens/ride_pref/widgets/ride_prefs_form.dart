@@ -1,3 +1,5 @@
+import 'package:blabla/ui/screens/rides/ride_screen.dart';
+
 import '../../../widgets/actions/bla_button.dart';
 import '../../../widgets/display/bla_divider.dart';
 import 'package:flutter/material.dart';
@@ -107,7 +109,13 @@ class _RidePrefFormState extends State<RidePrefForm> {
         requestedSeats: requestedSeats,
       );
 
-      print("Searching for rides from ${newPref.departure.name} to ${newPref.arrival.name}");
+      // navigate to the ride screen and pass new pref
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (ctx) => RidesScreen(initialRidePref: newPref),
+        ),
+      );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Please select both departure and arrival locations.")),
