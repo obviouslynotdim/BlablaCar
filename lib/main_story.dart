@@ -1,12 +1,10 @@
-
 import 'package:flutter/material.dart';
-import 'ui/screens/ride_pref/ride_prefs_screen.dart';
+import 'ui/screens/storybook/story_book_screen.dart';
 import 'ui/theme/theme.dart';
 
 void main() {
-   runApp(const BlaBlaApp()); 
+  runApp(const BlaBlaApp());
 }
-
 
 class BlaBlaApp extends StatelessWidget {
   const BlaBlaApp({super.key});
@@ -16,7 +14,7 @@ class BlaBlaApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: blaTheme,
-      home: Scaffold(body: RidePrefsScreen()),
+      home: Scaffold(body: StoryBookScreen()),
     );
   }
 }

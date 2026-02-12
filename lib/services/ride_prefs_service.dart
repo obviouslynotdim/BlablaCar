@@ -1,5 +1,5 @@
-
-import '../dummy_data/dummy_data.dart';
+ 
+import '../data/dummy_data.dart';
 import '../model/ride_pref/ride_pref.dart';
 
 ////
@@ -7,15 +7,16 @@ import '../model/ride_pref/ride_pref.dart';
 ///   - History of the last ride preferences        (to allow users to re-use their last preferences)
 ///   - Curent selected ride preferences.
 ///
-class RidePrefService {
+class RidePrefsService {
+  static RidePref? selectedRidePref;
+  // RidePref(
+  //   departureDate: DateTime.now(),
+  //   requestedSeats: 1,
+  //   departure: Location(name: "Paris", country: Country.uk),
+  //   arrival: Location(name: "PhnomPenh", country: Country.uk)); // The current selected ride preference
 
-  ///
-  /// List of past entered ride prefs. LIFO (most recents first)
-  ///
-  static List<RidePref> ridePrefsHistory = fakeRidePrefs;   // TODO for now fake data
-
+  static List<RidePref> ridePrefsHistory = fakeRidePrefs;
   static RidePref? currentRidePref;
  
   static bool get hasCurrentRidePref => currentRidePref != null;
-  
 }
